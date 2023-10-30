@@ -1,0 +1,124 @@
+Первая часть первого  ДЗ  
+GitBash commands
+
+1) Посмотреть где я:
+команда- pwd
+ответ:
+/c/Users/Мария
+
+2) Создать папку
+mkdir homework
+
+3) Зайти в папку
+cd homework
+
+4) Создать 3 папки
+mkdir work1
+mkdir work2
+mkdir work3
+либо: mkdir work1 work2 work3
+
+5) Зайти в любую папку
+cd work1
+
+6) Создать 5 файлов (3 txt, 2 json)
+touch newFile1.txt
+touch newFile2.txt
+touch newFile3.txt
+touch newFile1.json
+touch newFile2.jsoncd
+либо: touch newFile1.txt newFile2.txt newFile3.txt newFile1.json newFile2.json
+
+7) Создать 3 папки
+mkdir work1.1
+mkdir work1.2
+mkdir work1.3
+либо: mkdir work1.1 work1.2 work1.3
+
+
+8) Вывести список содержимого папки
+ls -la
+
+9) + Открыть любой txt файл
+vim newFile1.txt
+
+10) + написать туда что-нибудь, любой текст.
+i 
+1я стока: Ехали медведи
+2я стока: На велосипеде.
+3я стока: А за ними кот
+4я стока: Задом наперёд. 
+
+11) + сохранить и выйти.
+Esc 
+:wq
+
+12) Выйти из папки на уровень выше
+cd ..
+
+13) переместить любые 2 файла, которые вы создали, в любую другую папку.
+mv newFile1.json  newFile1.txt work1.1
+
+14) скопировать любые 2 файла, которые вы создали, в любую другую папку.
+cp newFile2.json  newFile2.txt work1.2
+
+15) Найти файл по имени
+find . -name newFile1.txt
+ответ: 
+./work1.1/newFile1.txt
+
+
+16) просмотреть содержимое в реальном времени (команда grep) изучите как она работает.
+tail -f newFile1.txt или cat newFile1.txt
+ответ:
+Ехали медведи
+На велосипеде.
+А за ними кот
+Задом наперёд.
+
+17) вывести несколько первых строк из текстового файла
+head -n3 newFile1.txt
+ответ:
+Ехали медведи
+На велосипеде.
+А за ними кот
+
+18) вывести несколько последних строк из текстового файла
+tail -n2 newFile1.txt
+ответ:
+А за ними кот
+Задом наперёд.
+
+19) просмотреть содержимое длинного файла (команда less) изучите как она работает.
+less newFile1.txt
+ответ:
+Ехали медведи
+На велосипеде.
+А за ними кот
+Задом наперёд.
+newFile1.txt (END)
+
+20) вывести дату и время
+date
+Tue Apr 18 20:39:12     2023
+
+Задание *
+1) Отправить http запрос на сервер:  http://162.55.220.72:5005/terminal-hw-request
+curl http://162.55.220.72:5005/terminal-hw-request
+ответ:
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<title>404 Not Found</title>
+<h1>Not Found</h1>
+<p>The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.</p>
+
+2) Написать скрипт который выполнит автоматически пункты 3, 4, 5, 6, 7, 8, 13
+cd /c/Пользователи/Мария/домашнее задание
+mkdir работа1 работа2 работа3
+cd work1
+прикосновение newFile1.txt newFile2.txt newFile3.txt Новый файл1.json newFile2.json
+mkdir работа1.1 работа1.2 работа1.3
+ls -la
+новый файл mv1.json newFile1.txt работа 1.1
+
+
+gist.github: https://gist.github.com/MariaIzmaylova/b475303f7c0f8bb4869b92afb9d7af8e
